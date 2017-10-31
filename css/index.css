@@ -91,9 +91,14 @@ a, a:hover, a:active, a:focus, a:visited { -webkit-tap-highlight-color:rgba(0,0,
 .cart_item .product_name { height: 15px; }
 .cart_item .product_intro { height: calc(100% - 41px); width: calc(100% - 16px); padding: 8px; }
 .cart_item .product_intro .price { font-size: 12rem; }
-.cart_item p:last-child { font-size: 12rem; }
+.cart_item p:last-child { font-size: 10rem; }
 .cart_item .sum { display: inline-block; width: 35px; /*margin-right: 10px*/ }
-.cart_item .sub,.cart_item .num,.cart_item .add { display:inline-block; width: 15px; padding: 5px; text-align: center }
-.cart_item .add { background-color: #dabfae; margin-left: 5px }
-
+.cart_item .sub,.cart_item .num,.cart_item .add { display:inline-block; width: 12px; padding: 3px; text-align: center }
+.cart_item .add { background-color: #dabfae; margin-left: 5px; height: 12px; }
+.cart_item .sub { font-size: 12rem; }
+.sum_price { display: -webkit-flex; /* Safari */ display: flex; justify-content: space-around; position: fixed; bottom: 50px; width: 100%; height: 40px; font-size: 14rem; background-color: #fafafa; }
+.sum_price a.selection { display: block; width: 20px; height: 20px; top: calc(50% - 10px); left: 15px; position: absolute; background-size: 100%; background-image: url('../img/unselected.png'); }
+.sum_price a.selection.selected { background-image: url('../img/selected.png'); }
+.sum_price div { display: inline-block; height: 100%; width: 100%; text-align: center; line-height: 40px }
+.sum_price div:last-child { background-color: #dabfae; }
 /*购物车 end*/
