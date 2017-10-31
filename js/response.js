@@ -10,7 +10,6 @@
         // if (width > 320) width = 320;
         // var rem = width / 3.2;
         docEl.style.fontSize = rem + 'px'
-        alert(docEl.style.fontSize);
     }
     win.addEventListener('resize', function() {
         clearTimeout(tid);
