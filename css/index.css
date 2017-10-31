@@ -80,5 +80,20 @@ a, a:hover, a:active, a:focus, a:visited { -webkit-tap-highlight-color:rgba(0,0,
 .product_details p.intro_words { font-size: 12rem; text-indent: 24px; margin: 10px 5px; }
 /*产品详情 end*/
 
+/*购物车 start*/
+.nav .delete { position: absolute; right: 15px; font-size: 14rem; color: #000; padding: 0 5px; }
+.shopping_cart { margin-top: 55px; }
+.cart_item { margin: 5px; position: relative; display: -webkit-flex; /* Safari */ display: flex; }
+.cart_item a.selection { display: block; width: 20px; height: 20px; top: calc(50% - 10px); left: 10px; position: absolute; background-size: 100%; background-image: url('../img/unselected.png'); }
+.cart_item a.selection.selected { background-image: url('../img/selected.png'); }
+.cart_item img { width: 130px; height:120px; }
+.cart_item>div { width: calc(100% - 130px); height: 120px; }
+.cart_item .product_name { height: 15px; }
+.cart_item .product_intro { height: calc(100% - 41px); width: calc(100% - 16px); padding: 8px; }
+.cart_item .product_intro .price { font-size: 12rem; }
+.cart_item p:last-child { font-size: 12rem; }
+.cart_item .sum { display: inline-block; width: 35px; /*margin-right: 10px*/ }
+.cart_item .sub,.cart_item .num,.cart_item .add { display:inline-block; width: 15px; padding: 5px; text-align: center }
+.cart_item .add { background-color: #dabfae; margin-left: 5px }
 
-
+/*购物车 end*/
