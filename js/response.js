@@ -5,11 +5,12 @@
 
     function refreshRem() {
         var width = docEl.getBoundingClientRect().width;
-        // if (width > 640) width = 640;
-        // var rem = width / 6.4;
-        if (width > 320) width = 320;
-        var rem = width / 3.2;
+        if (width > 360) width = 360;
+        var rem = width / 360;
+        // if (width > 320) width = 320;
+        // var rem = width / 3.2;
         docEl.style.fontSize = rem + 'px'
+        alert(docEl.style.fontSize);
     }
     win.addEventListener('resize', function() {
         clearTimeout(tid);

@@ -1,31 +1,17 @@
-body,html {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
-}
-
+body, html { width: 100%; height: 100%; margin: 0; padding: 0; overflow-x: hidden; }
+a, a:hover, a:active, a:focus, a:visited { -webkit-tap-highlight-color: transparent; text-decoration: none; }
 
 /*首页 start*/
-.container {
-	display: -webkit-flex; /* Safari */
-	display: flex;
-	flex-direction: column;
-	/*justify-content: center;*/
-	align-items: center;
-	background: #d9bfad;
-	font-size: .12rem;
-	padding-top: 50px;
-}
-.container img {
-	width: 55px;
-	height: 55px;
-}
-.container .index_intro {
-	width: 900px;
-}
-
+.container { display: -webkit-flex; /* Safari */ display: flex; flex-direction: column;	/*justify-content: center;*/ align-items: center; height: calc(100% - 50px); background-image: url('../img/index-bg.jpg'); background-size: 100%; font-size: 16rem; padding-top: 50px; }
+.container img { width: 20%; }
+.index_intro { height: auto; width: 80%; text-align: center; font-size: 16rem; color: #fff; line-height: 26px; margin: 20px auto 50px; }
+.menu_body { width: 80%; padding: 10px; background-color: #c77f77; }
+.menu_body a { background-color: #974940; display: block; width: 100%; margin: 10px auto; }
+.menu_body a:first-child { margin-top: 0; background-color: transparent; }
+.menu_body a:last-child { margin-bottom: 0; }
+.menu_body a p { margin: 0; padding: 5px 0; color: #fff; text-align: center; font-size: 12rem; }
+.menu_body a p:first-child { font-size: 16rem; }
 /*首页 end*/
+
 
 
