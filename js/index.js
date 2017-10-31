@@ -10,3 +10,13 @@ var mySwiper = new Swiper('.swiper-container', {
     loop: true,
     pagination: '.swiper-pagination',
 })
+
+$(".nav_list a").click(function () {
+	$(".nav_list a").removeClass('active');
+	$(this).addClass('active');
+})
+
+$(".classify_nav a").click(function () {
+	$(".classify_nav a").removeClass('active');
+	$(this).addClass('active');
+})
