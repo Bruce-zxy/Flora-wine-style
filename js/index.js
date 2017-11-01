@@ -72,6 +72,7 @@ $(".sum_price .selection").click(function () {
 	$(this).toggleClass("selected");
 	if($(".cart_item .selected").length === len) {
 		cartItem.removeClass("selected");
+		$(this).removeClass("selected");
 		sumPrice()
 	} else {
 		cartItem.map(function (i, item) {
