@@ -1,0 +1,62 @@
+body, html { width: 100%; height: 100%; margin: 0; padding: 0; overflow-x: hidden; }
+a, a:hover, a:active, a:focus, a:visited { -webkit-tap-highlight-color:rgba(0,0,0,0); text-decoration: none; color: #666; }
+
+
+/*首页 Start*/
+.container {
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/index-bg.jpg');
+	background-size: cover;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
+}
+.container img {
+	width: 150px;
+	margin-bottom: 35px;
+}
+.menu_body {
+	margin-bottom: 60px;
+}
+.menu_body .menu_title {
+	font-size: 24px;
+	color: #5b4752;
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+
+.menu_body p {
+	text-align: center;
+}
+.menu_body a {
+	display: block;
+	width: 210px;
+	height: 40px;
+	background-color: rgba(91, 71, 82, .7);
+	border-radius: 5px;
+	padding: 5px 0;
+	margin: 10px 0;
+	cursor: pointer;
+}
+.menu_body a p {
+	color: #fff;
+	margin: 0;
+}
+.menu_body a p:first-child {
+	font-size: 16px;
+}
+.menu_body a p:last-child {
+	font-size: 10px;
+}
+
+
+/*首页 End*/
+
+
+
