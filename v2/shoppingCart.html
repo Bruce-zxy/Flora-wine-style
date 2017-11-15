@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<!------分------割------线------>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="Author" content="Bruce Zhu">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- IOS中Safari允许全屏浏览 -->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!-- IOS中Safari顶端状态条样式 -->
+    <meta content="white" name="apple-mobile-web-app-status-bar-style">
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <script src="./js/response.js"></script>
+
+</head>
+<!------分------割------线------>
+
+<body>
+
+    <!-- 头部导航 -->
+    <div class="nav">
+        <p>购物车<a href="javasctipt:;" class="delete">删除</a></p>
+    </div>
+
+    <div class="shopping_cart">
+        <div class="cart_item">
+            <a href="javasctipt:;" class="selection"></a>
+            <img src="./img/shop_list_product.jpg" alt="product">
+            <div>
+                <p class="product_name">波尔多传奇 Legend of Bordeaux</p>
+                <div class="product_intro">
+                    <p class="tab"><span>法国原产</span><span>干型</span></p>
+                    <p>￥<span class="price">456</span>/瓶</p>
+                    <p>小计：￥<span class="sum">456</span>数量：<span class="sub">&minus;</span><span class="num">1</span><span class="add">&plus;</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="cart_item">
+            <a href="javasctipt:;" class="selection"></a>
+            <img src="./img/shop_list_product.jpg" alt="product">
+            <div>
+                <p class="product_name">波尔多传奇 Legend of Bordeaux</p>
+                <div class="product_intro">
+                    <p class="tab"><span>法国原产</span><span>干型</span></p>
+                    <p>￥<span class="price">456</span>/瓶</p>
+                    <p>小计：￥<span class="sum">456</span>数量：<span class="sub">&minus;</span><span class="num">2</span><span class="add">&plus;</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="cart_item">
+            <a href="javasctipt:;" class="selection"></a>
+            <img src="./img/shop_list_product.jpg" alt="product">
+            <div>
+                <p class="product_name">波尔多传奇 Legend of Bordeaux</p>
+                <div class="product_intro">
+                    <p class="tab"><span>法国原产</span><span>干型</span></p>
+                    <p>￥<span class="price">456</span>/瓶</p>
+                    <p>小计：￥<span class="sum">456</span>数量：<span class="sub">&minus;</span><span class="num">3</span><span class="add">&plus;</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sum_price">
+        <div>
+            <a href="javasctipt:;" class="selection"></a>
+            全选
+        </div>
+        <div>
+            合计：&yen;
+            <span class="heji">0</span>
+        </div>
+        <div>
+            <a href="./payment.html">去结算</a>
+        </div>
+    </div>
+
+    <div class="nav_list">
+        <a href="./index.html">首页</a>
+        <a href="./shoppingCart.html" class="active">购物车<span class="cart_info">1</span></a>
+        <a href="javasctipt:;">我的</a>
+    </div>
+
+</body>
+
+<script src="./lib/jQuery-1.9.1/jquery.min.js"></script>
+<script src="./js/index.js"></script>
+<!------分------割------线------>
+</html>
