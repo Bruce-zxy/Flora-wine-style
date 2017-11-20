@@ -13,7 +13,10 @@ function sumPrice() {
 			sum+=count*price;
 		}
 	})
-	$(".sum_price .heji").html(sum);
+	$(".sum_price .heji").html(sum.toFixed(2));
+}
+function checkAll() {
+	return $(".cart_item .selection").length !== $(".cart_item .selected").length ? $(".sum_price .selection").removeClass("selected") : null;
 }
 function swiperInit(swiper) {
 	var mySwiper = new Swiper('.swiper-container', {
@@ -22,7 +25,7 @@ function swiperInit(swiper) {
 	    loop: true,
 	    pagination: '.swiper-pagination',
 	})
-	swiper.height(document.documentElement.clientWidth*9/16);
+	swiper.height(document.documentElement.clientWidth*12/16);
 }
 
 // 轮播图
@@ -66,19 +69,21 @@ $(".order_type a").click(function () {
 // 购物车选中切换
 $(".cart_item .selection").click(function () {
 	$(this).toggleClass("selected");
+	checkAll();
 	sumPrice();
 })
 $(".cart_item img").click(function () {
 	$(this).prev().toggleClass("selected");
+	checkAll();
 	sumPrice();
 })
 
 // 购物车加
 $(".cart_item .add").click(function () {
 	var count = $(this).prev().html()*1;
-	var price = $(this).parent().prev().find(".price").html()*1;
+	var price = ($(this).parent().prev().find(".price").html()*1).toFixed(2);
 	$(this).prev().html(++count);
-	$(this).parent().find(".sum").html(count*price);
+	$(this).parent().find(".sum").html((count*price).toFixed(2));
 	sumPrice();
 })
 
@@ -86,9 +91,9 @@ $(".cart_item .add").click(function () {
 $(".cart_item .sub").click(function () {
 	var count = $(this).next().html()*1;
 	if (count === 1) return
-	var price = $(this).parent().prev().find(".price").html()*1;
+	var price = ($(this).parent().prev().find(".price").html()*1).toFixed(2);
 	$(this).next().html(--count);
-	$(this).parent().find(".sum").html(count*price);
+	$(this).parent().find(".sum").html((count*price).toFixed(2));
 	sumPrice();
 })
 
@@ -112,7 +117,7 @@ $(".sum_price .selection").click(function () {
 // 购物车效果
 cart = $(".nav_list .cart_info").parent().offset();
 $('.cart').click(function() {
-    var imgSrc = $(this).parent().parent().parent().find('img').attr('src');
+    var imgSrc = $(this).attr('temp_src');
     var flyer = $('<img class="u-flyer" width="50" height="50" style="z-index:100;border-radius:50%;" src="'+imgSrc+'">');
     flyer.fly({
         start: {
