@@ -140,10 +140,39 @@ $('.cart').click(function() {
 $("input").focus(function() {
 	clearTimeout(t);
 	$(".nav_list").hide();
-})
+});
 $("input").blur(function() {
 	t = setTimeout(function () {
 		$(".nav_list").show()
 	}, 200)
+});
+
+// 提示框
+$(".msg_mask a").click(function () {
+	var __mask = $(this).parent().parent();
+	__mask.animate({"opacity": 0}, function () {
+		__mask.addClass("msg_dn");
+	});
+});
+
+// 搜索热词
+$(".search_part input").focus(function () {
+	$(".hot_words").css("display","block");
+});
+
+// 搜索预测
+function choose(display) {
+	$(".pre_words").css("display", display);
+	$(".click_hide").css("display", display);
+}
+$(".search_part input").change(function () {
+	choose("block");
+});
+$(".pre_words p").click(function () {
+	$(".search_part input").val(this.innerHTML);
+	choose("none");
+});
+$(".click_hide").click(function () {
+	choose("none");
 })
- 
+
