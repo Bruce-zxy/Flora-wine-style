@@ -191,8 +191,9 @@ a.selection.selected{background-image:url("data:image/png;base64,iVBORw0KGgoAAAA
 .empty_page a{width:30%;height:30px;line-height:30px;font-size:14px;text-align:center;border-radius:10px;color:#eee;background-color:#8A7D85;}
 /*级别选择 Start*/
 .level { position: relative; height: calc(100% - 100px); }
-.level .order span:first-child { line-height: 30px; position: relative; box-sizing: border-box; padding: 10px; text-align: right; }
-.level .order img { position: absolute; left: 15px; width: 30px; height: 30px; vertical-align: middle; }
+.level .order span:first-child { line-height: 30px; width: 40%; position: relative; box-sizing: border-box; padding: 10px 0 10px 50px; text-align: left; }
+.level .order span:last-child { width: 60%; }
+.level .order span img { position: absolute; left: 15px; width: 30px; height: 30px; vertical-align: middle; }
 .level .approach_1st { display: block; width: 100%; }
 .level .approach_1st a { position: relative; display: block; width: calc(100% - 20px); }
 .level .approach_1st b { position: absolute; right: 20px; display: inline-block; }
