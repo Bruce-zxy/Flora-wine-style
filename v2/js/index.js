@@ -103,7 +103,7 @@ $(".cart_item .add").click(function () {
 // 购物车减
 $(".cart_item .sub").click(function () {
 	var count = $(this).next().html()*1;
-	if (count === 1) return
+	if (count === 0) return
 	var price = ($(this).parent().prev().find(".price").html()*1).toFixed(2);
 	$(this).next().html(--count);
 	$(this).parent().parent().next().find(".sum").html((count*price).toFixed(2));
