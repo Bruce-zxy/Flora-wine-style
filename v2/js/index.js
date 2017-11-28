@@ -2,10 +2,17 @@ var swiper,				// 轮播图
 	imgs,				// 搜索放大镜
 	u, isAndroid,		// 判断终端
 	cart,				// 购物车
-	t;					// 隐藏菜单栏定时
+	t,					// 隐藏菜单栏定时
+	preSum = 0;			// 总计（前）
 function sumPrice() {
 	var sum = 0;
 	var price,count;
+    var options = {  
+        useEasing: true,
+        useGrouping: true,
+        separator: ',',
+        decimal: '.',
+    };
 	$(".cart_item .selection").map(function (i, item) {
 		if($(item).hasClass("selected")) {
 			count = $(item).parent().find(".num").html()*1;
@@ -13,24 +20,30 @@ function sumPrice() {
 			sum+=count*price;
 		}
 	})
-	$(".sum_price .heji").html(sum.toFixed(2));
+	var numAnim = new CountUp($(".sum_price .heji")[0], preSum.toFixed(2), sum.toFixed(2), 2, 1, options);
+	if (!numAnim.error) {
+	    numAnim.start();
+	    preSum = sum;
+	} else {
+	    console.error(numAnim.error);
+	}
 }
 function checkAll() {
 	return $(".cart_item .selection").length !== $(".cart_item .selected").length ? $(".sum_price .selection").removeClass("selected") : null;
 }
-function swiperInit(swiper) {
+function swiperInit(swiper, ratio) {
 	var mySwiper = new Swiper('.swiper-container', {
 	    speed: 800,
 	    autoplay: 5000,
 	    loop: true,
 	    pagination: '.swiper-pagination',
 	})
-	swiper.height(document.documentElement.clientWidth*12/16);
+	swiper.height(document.documentElement.clientWidth*ratio/16);
 }
 
 // 轮播图
 swiper = $(".swiper-container");
-swiper.length ? swiperInit(swiper) : null;
+swiper.length > 0 ? swiper.parent().prop("className") === "bg_up" ? swiperInit(swiper, 9) : swiperInit(swiper, 12) : null;
 
 // 搜索按钮
 imgs = $('[alt="搜索"]');
