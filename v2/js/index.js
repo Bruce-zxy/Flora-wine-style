@@ -96,7 +96,7 @@ $(".cart_item .add").click(function () {
 	var count = $(this).prev().html()*1;
 	var price = ($(this).parent().prev().find(".price").html()*1).toFixed(2);
 	$(this).prev().html(++count);
-	$(this).parent().find(".sum").html((count*price).toFixed(2));
+	$(this).parent().parent().next().find(".sum").html((count*price).toFixed(2));
 	sumPrice();
 })
 
@@ -106,7 +106,7 @@ $(".cart_item .sub").click(function () {
 	if (count === 1) return
 	var price = ($(this).parent().prev().find(".price").html()*1).toFixed(2);
 	$(this).next().html(--count);
-	$(this).parent().find(".sum").html((count*price).toFixed(2));
+	$(this).parent().parent().next().find(".sum").html((count*price).toFixed(2));
 	sumPrice();
 })
 
