@@ -189,3 +189,17 @@ $(".click_hide").click(function () {
 	choose("none");
 })
 
+
+function showOrderClassify() {
+	$('.classify_choice_mask').fadeIn();
+	$('.classify_choice_mask .classify_choice').addClass('click');
+	$('.classify_choice_mask')[0].onclick = hideOrderClassify;
+}
+function hideOrderClassify() {
+	if(window.event.target.className !== 'classify_content' && (window.event.target.className === 'classify_choice_mask' || window.event.target.tagName === 'SPAN' || window.event.target.tagName === 'I')) {
+		$('.classify_choice_mask .classify_choice').removeClass('click');
+		$('.classify_choice_mask').fadeOut();
+	}
+}
+$('.order_classify').click(showOrderClassify);
+
