@@ -203,3 +203,22 @@ function hideOrderClassify() {
 }
 $('.order_classify').click(showOrderClassify);
 
+function imgCover(data) {
+	for (i in data) {
+		if (!isNaN(i)) {
+			var img = $(data[i]).children();
+			var direct = img.width() > img.height() ? 'width' : 'height';
+			img.css(direct, '100%');
+		}
+	}
+}
+
+var resIMG1 = $('.product a div');
+var resIMG2 = $('.swiper-slide a');
+
+imgCover(resIMG1);
+imgCover(resIMG2);
+
+
+
+
