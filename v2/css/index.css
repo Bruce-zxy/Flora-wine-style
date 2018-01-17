@@ -76,8 +76,8 @@ div.details_list .product_intro{background-color:#EDE6EA;}
 .product_details .product_intro{font-size:12rem;width:calc(100% - 30px);margin:0 5px;background-color:#EDE6EA;}
 .product_details .product_intro p:first-child{margin-top:0;}
 .product_details> img{width:calc(100% - 10px);margin:0 5px;}
-.product_details>p {width:calc(100% - 10px);}
-.product_details>p img{width:100%}
+.product_details p {width:calc(100% - 10px);}
+.product_details p>img{width:100%}
 .product_details .intro_words p{font-size:12rem;margin:10px 5px;text-indent:12px;}
 /*产品详情 end*/
 /*购物车 start*/
