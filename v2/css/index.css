@@ -24,8 +24,8 @@ a,a:hover,a:active,a:focus,a:visited{text-decoration:none;color:#666;-webkit-tap
 .bg_down{width:100%;}
 /*轮播图*/
 .swiper-container{overflow:hidden;width:calc(100% - 12px);margin:6px 6px 0 6px;}
-.swiper-slide a { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; width: 100%; height: 100%; }
-.swiper-slide img { width: 100%;	/*height: 100%;*/ }
+.swiper-slide a { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; overflow: hidden; width: 100%; height: 100%; }
+.swiper-slide img { /*width: 100%;*/	/*height: 100%;*/ }
 .swiper-container .swiper-pagination{text-align:right;}
 .swiper-container .swiper-pagination-bullet{width:6px;height:6px;border-radius:0;}
 .swiper-container .swiper-pagination-bullet-active{background:#8A7D85;}
@@ -70,15 +70,16 @@ div.details_list .product_intro{background-color:#EDE6EA;}
 /*产品列表 end*/
 /*产品详情 start*/
 .product_details{margin:55px 0;}
-.product_details .swiper-container{margin-bottom:0;}
+.product_details .swiper-container{margin-bottom:0;overflow: hidden;height: 309px;}
 .product_details> p{margin:0 5px;}
-.product_details .product_name{background-color:#8A7D85;}
+.product_details .product_name{background-color:#8A7D85;width: auto;}
 .product_details .product_intro{font-size:12rem;width:calc(100% - 30px);margin:0 5px;background-color:#EDE6EA;}
 .product_details .product_intro p:first-child{margin-top:0;}
-.product_details> img{width:calc(100% - 10px);margin:0 5px;}
-.product_details p {width:calc(100% - 10px);}
-.product_details p>img{width:100%}
-.product_details .intro_words p{font-size:12rem;margin:10px 5px;text-indent:12px;}
+.product_details> img { width: calc(100% - 10px); margin: 0 5px; }
+.product_details p { width: calc(100% - 10px); }
+.product_details p>img { width: 100% }
+.product_details .intro_words p { font-size: 12rem; margin: 10px 5px; }
+
 /*产品详情 end*/
 /*购物车 start*/
 .nav .delete{font-size:14rem;position:absolute;right:15px;padding:0 5px;color:#FFF;}
