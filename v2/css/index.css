@@ -79,6 +79,7 @@ div.details_list .product_intro{background-color:#EDE6EA;}
 .product_details p { width: calc(100% - 10px); }
 .product_details p>img { width: 100% }
 .product_details .intro_words p { font-size: 12rem; margin: 10px 5px; }
+.intro_words { font-size: 12rem; }
 
 /*产品详情 end*/
 /*购物车 start*/
